@@ -17,20 +17,6 @@ function renderLevelOfService(ride) {
 
 }
 
-function renderBorderColorHTML(ride) {
-
-  let borderColorHTML
-
-  if (ride[0].purpleRequested == true) {
-    borderColorHTML = `purple`
-  } else {
-    borderColorHTML = `gray`
-  } 
-
-  return borderColorHTML
-
-}
-
 function renderPassenger(ride) {
 
   //Identify level of service
@@ -45,6 +31,20 @@ function renderPassenger(ride) {
   )
 
   //Identify passenger details within each ride
+  
+function renderBorderColorHTML(ride) {
+
+  let borderColorHTML
+
+  if (ride[0].purpleRequested == true) {
+    borderColorHTML = `purple`
+  } else {
+    borderColorHTML = `gray`
+  } 
+
+  return borderColorHTML
+
+}
 
   for (let s = 0; s < ride.length; s++){
     let service = ride[s]
